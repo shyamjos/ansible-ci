@@ -1,0 +1,6 @@
+---
+- name: Check Gentoo rlease
+  hosts: all
+  tasks:
+  - name: Execute the command in remote shell
+    ansible.builtin.shell: cat /etc/gentoo-release
