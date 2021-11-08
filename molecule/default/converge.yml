@@ -1,7 +1,5 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include my-new-role"
-      include_role:
-        name: "my-new-role"
+
+- import_playbook: ../../main.yml
