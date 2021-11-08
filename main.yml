@@ -1,0 +1,10 @@
+---
+- name: Molecule test
+  hosts: all
+  become: true
+  
+  tasks:
+    - name : test
+      debug:
+        msg: Hello, World!
+
