@@ -4,4 +4,4 @@ jobs:
   Molecule-Converge:
     runs-on: self-hosted
     steps:
-      - run: molecule converge
+      - run: cd path: "${{ github.repository }}" && molecule converge
