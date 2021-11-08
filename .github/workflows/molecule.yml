@@ -1,11 +1,7 @@
-on: push
-
+name: Molecule CI
+on: [push]
 jobs:
-  molecule:
+  Molecule-Converge:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v2
-        with:
-          path: "${{ github.repository }}"
-      - uses: gofrolist/molecule-action@v2
-
+      - run: molecule converge
