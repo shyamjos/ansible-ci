@@ -1,5 +1,5 @@
 ---
-- name: Molecule test
+- name: Molecule test with gitlab-ci
   hosts: all
   become: true
   
