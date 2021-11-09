@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+
+  tasks:
+    - name: Verify file is created
+      ansible.builtin.stat:
+        path: /tmp/ansible.file
+      register: file
+
+    - name: Fail if the file does not exist
+      ansible.builtin.fail:
+        msg: "File not found!"
+      when:  not file.stat.exists 
